@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)file:///C:/Users/berne/Downloads/career-safety-system.html -->
+<html lang="zh-Hant"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>轉職安全度檢測系統 · 科學八字</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./轉職安全度檢測系統 · 科學八字_files/css2" rel="stylesheet">
+<style>
+:root{
+  --bg:#08090c;
+  --bg2:#0d0f14;
+  --panel:#101319;
+  --panel2:#141821;
+  --line:#23272f;
+  --line2:#2e333d;
+  --gold:#d4b06a;
+  --gold-bright:#f0d199;
+  --gold-deep:#a8842f;
+  --txt:#eae7df;
+  --txt-mut:#8c8a83;
+  --txt-dim:#5d5c57;
+  --green:#46cf8b;
+  --amber:#e6b53e;
+  --orange:#ec8a3c;
+  --red:#e8595a;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--bg);
+  color:var(--txt);
+  font-family:'Noto Sans TC',-apple-system,sans-serif;
+  font-weight:300;
+  line-height:1.7;
+  letter-spacing:.01em;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:430px;margin:0 auto;min-height:100vh;position:relative;
+  background:
+   radial-gradient(120% 60% at 50% -10%, rgba(212,176,106,.10) 0%, rgba(212,176,106,0) 55%),
+   linear-gradient(180deg,#0a0b0f 0%, #08090c 100%);
+}
+.wrap::before{content:"";position:fixed;inset:0;max-width:430px;left:50%;transform:translateX(-50%);
+  background-image:linear-gradient(rgba(255,255,255,.012) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.012) 1px,transparent 1px);
+  background-size:38px 38px;pointer-events:none;z-index:0;}
+.mono{font-family:'Rajdhani',sans-serif;letter-spacing:.16em;text-transform:uppercase;}
+.serif{font-family:'Noto Serif TC',serif;}
+
+/* ---------- HEADER ---------- */
+header{position:relative;z-index:2;padding:30px 26px 22px;}
+.brandrow{display:flex;align-items:center;justify-content:space-between;margin-bottom:30px;}
+.brand{display:flex;align-items:center;gap:9px;}
+.brand .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold);}
+.brand .nm{font-family:'Noto Serif TC',serif;font-weight:700;font-size:15px;letter-spacing:.18em;color:var(--gold-bright);}
+.ver{font-family:'Rajdhani';font-size:11px;letter-spacing:.2em;color:var(--txt-dim);border:1px solid var(--line);padding:2px 8px;border-radius:3px;}
+.eyebrow{font-family:'Rajdhani';font-size:11.5px;letter-spacing:.34em;color:var(--gold-deep);text-transform:uppercase;margin-bottom:14px;}
+h1{font-family:'Noto Serif TC',serif;font-weight:900;font-size:33px;line-height:1.18;letter-spacing:.01em;color:#fff;margin-bottom:16px;}
+h1 .g{color:var(--gold-bright);}
+.subline{font-family:'Rajdhani';font-size:12px;letter-spacing:.26em;color:var(--txt-mut);text-transform:uppercase;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:9px 0;display:flex;justify-content:space-between;}
+.tagline{margin-top:20px;font-size:14px;color:var(--txt-mut);font-weight:300;line-height:1.85;}
+.tagline b{color:var(--txt);font-weight:500;}
+
+/* ---------- FORM ---------- */
+main{position:relative;z-index:2;padding:8px 18px 30px;}
+.sec{margin-top:18px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,var(--panel) 0%,var(--bg2) 100%);overflow:hidden;}
+.sec-head{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid var(--line);}
+.sec-idx{font-family:'Rajdhani';font-weight:700;font-size:13px;color:var(--gold);border:1px solid var(--gold-deep);border-radius:6px;width:30px;height:30px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.sec-tt{font-family:'Noto Serif TC',serif;font-weight:700;font-size:17px;color:var(--txt);}
+.sec-en{font-family:'Rajdhani';font-size:10.5px;letter-spacing:.22em;color:var(--txt-dim);text-transform:uppercase;margin-top:1px;}
+.sec-body{padding:6px 18px 20px;}
+.fld{padding:15px 0;border-bottom:1px solid rgba(255,255,255,.04);}
+.fld:last-child{border-bottom:none;}
+.lbl{font-size:13.5px;color:var(--txt);font-weight:400;margin-bottom:11px;display:flex;align-items:center;gap:7px;}
+.lbl .hint{font-size:11px;color:var(--txt-dim);font-weight:300;}
+.inputshell{position:relative;display:flex;align-items:center;}
+.inputshell .cur{position:absolute;left:14px;font-family:'Rajdhani';font-size:13px;color:var(--gold-deep);letter-spacing:.1em;pointer-events:none;}
+input[type=number]{width:100%;background:#0a0c10;border:1px solid var(--line2);border-radius:9px;padding:13px 14px 13px 44px;color:var(--gold-bright);font-family:'Rajdhani';font-weight:600;font-size:18px;letter-spacing:.04em;outline:none;transition:border-color .2s,box-shadow .2s;}
+input[type=number].nocur{padding-left:14px;}
+input[type=number]:focus{border-color:var(--gold-deep);box-shadow:0 0 0 3px rgba(212,176,106,.08);}
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0;}
+.unit{position:absolute;right:14px;font-size:11px;color:var(--txt-dim);}
+
+/* slider */
+.slidewrap{display:flex;align-items:center;gap:14px;}
+.slidewrap input[type=range]{flex:1;-webkit-appearance:none;appearance:none;height:4px;border-radius:4px;background:var(--line2);outline:none;}
+.slidewrap input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--gold-bright),var(--gold-deep));border:2px solid #1a1d24;box-shadow:0 0 12px rgba(212,176,106,.5);cursor:pointer;}
+.slidewrap input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:var(--gold);border:2px solid #1a1d24;cursor:pointer;}
+.slideval{font-family:'Rajdhani';font-weight:700;font-size:22px;color:var(--gold-bright);min-width:54px;text-align:center;border:1px solid var(--line2);border-radius:8px;padding:4px 0;}
+.slidescale{display:flex;justify-content:space-between;font-family:'Rajdhani';font-size:10px;letter-spacing:.1em;color:var(--txt-dim);margin-top:7px;text-transform:uppercase;}
+
+/* toggle yes/no */
+.toggle{display:flex;gap:8px;}
+.toggle button{flex:1;background:#0a0c10;border:1px solid var(--line2);border-radius:9px;padding:11px 0;color:var(--txt-mut);font-family:'Noto Sans TC';font-size:14px;font-weight:400;cursor:pointer;transition:.18s;}
+.toggle button[aria-pressed=true]{background:linear-gradient(180deg,rgba(212,176,106,.18),rgba(212,176,106,.06));border-color:var(--gold-deep);color:var(--gold-bright);font-weight:500;}
+
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chips button{background:#0a0c10;border:1px solid var(--line2);border-radius:20px;padding:8px 15px;color:var(--txt-mut);font-size:13px;font-weight:400;cursor:pointer;transition:.18s;}
+.chips button[aria-pressed=true]{background:linear-gradient(180deg,rgba(212,176,106,.2),rgba(212,176,106,.06));border-color:var(--gold);color:var(--gold-bright);font-weight:500;box-shadow:0 0 14px rgba(212,176,106,.15);}
+
+/* analyze btn */
+.cta-btn{margin-top:26px;width:100%;border:none;cursor:pointer;border-radius:13px;padding:18px;background:linear-gradient(180deg,var(--gold-bright) 0%,var(--gold) 45%,var(--gold-deep) 100%);color:#1a1305;font-family:'Noto Serif TC',serif;font-weight:700;font-size:17px;letter-spacing:.06em;box-shadow:0 8px 30px rgba(212,176,106,.28);transition:transform .15s,box-shadow .15s;}
+.cta-btn:active{transform:scale(.98);box-shadow:0 4px 18px rgba(212,176,106,.3);}
+.cta-btn .sub{display:block;font-family:'Rajdhani';font-weight:600;font-size:10.5px;letter-spacing:.28em;color:rgba(26,19,5,.65);margin-top:3px;}
+.warn{color:var(--orange);font-size:12.5px;text-align:center;margin-top:12px;display:none;}
+
+/* ---------- RESULT ---------- */
+#result{display:none;}
+.rpt-top{padding:28px 22px 12px;position:relative;z-index:2;}
+.rpt-flag{font-family:'Rajdhani';font-size:11px;letter-spacing:.3em;color:var(--gold-deep);text-transform:uppercase;text-align:center;margin-bottom:6px;}
+.rpt-tt{font-family:'Noto Serif TC',serif;font-weight:700;font-size:20px;text-align:center;color:#fff;margin-bottom:4px;}
+.rpt-meta{font-family:'Rajdhani';font-size:11px;letter-spacing:.16em;color:var(--txt-dim);text-align:center;text-transform:uppercase;}
+
+/* gauge */
+.gauge-card{margin:22px 18px 0;border:1px solid var(--line);border-radius:18px;background:radial-gradient(120% 90% at 50% 0%,rgba(212,176,106,.08),rgba(0,0,0,0) 60%),linear-gradient(180deg,var(--panel2),var(--bg2));padding:30px 20px 26px;position:relative;z-index:2;overflow:hidden;}
+.gauge-card::after{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.5;}
+.gauge-wrap{position:relative;width:230px;height:230px;margin:0 auto;}
+.gauge-wrap svg{transform:rotate(-90deg);}
+.gauge-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.gauge-num{font-family:'Rajdhani';font-weight:700;font-size:74px;line-height:.9;color:#fff;letter-spacing:.02em;}
+.gauge-num span{font-size:26px;color:var(--txt-mut);}
+.gauge-lab{font-family:'Rajdhani';font-size:11px;letter-spacing:.28em;color:var(--txt-dim);text-transform:uppercase;margin-top:4px;}
+.band-pill{text-align:center;margin-top:22px;}
+.band-pill .bp{display:inline-block;font-family:'Noto Serif TC',serif;font-weight:700;font-size:18px;padding:7px 22px;border-radius:30px;border:1px solid;letter-spacing:.04em;}
+.band-desc{text-align:center;font-size:13px;color:var(--txt-mut);margin-top:10px;}
+
+/* stat row */
+.stat-row{display:flex;gap:12px;margin:16px 18px 0;position:relative;z-index:2;}
+.stat{flex:1;border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,var(--panel),var(--bg2));padding:16px 14px;}
+.stat .k{font-family:'Rajdhani';font-size:10px;letter-spacing:.2em;color:var(--txt-dim);text-transform:uppercase;margin-bottom:9px;}
+.stat .v{font-family:'Rajdhani';font-weight:700;font-size:32px;line-height:1;color:var(--gold-bright);}
+.stat .v small{font-size:13px;color:var(--txt-mut);font-weight:500;margin-left:3px;}
+.stat .risk-tag{display:inline-block;font-family:'Noto Sans TC';font-weight:700;font-size:18px;padding:3px 14px;border-radius:8px;border:1px solid;margin-top:2px;}
+
+/* dimensions */
+.block{margin:20px 18px 0;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,var(--panel),var(--bg2));padding:20px;position:relative;z-index:2;}
+.block-h{display:flex;align-items:center;gap:9px;margin-bottom:18px;}
+.block-h .bar{width:3px;height:16px;background:var(--gold);border-radius:2px;}
+.block-h .t{font-family:'Noto Serif TC',serif;font-weight:700;font-size:16px;color:var(--txt);}
+.block-h .e{font-family:'Rajdhani';font-size:10px;letter-spacing:.2em;color:var(--txt-dim);margin-left:auto;text-transform:uppercase;}
+.dim{margin-bottom:16px;}
+.dim:last-child{margin-bottom:0;}
+.dim-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px;}
+.dim-nm{font-size:13.5px;color:var(--txt);}
+.dim-nm .en{font-family:'Rajdhani';font-size:9.5px;letter-spacing:.16em;color:var(--txt-dim);margin-left:6px;}
+.dim-sc{font-family:'Rajdhani';font-weight:700;font-size:16px;color:var(--gold-bright);}
+.track{height:7px;background:#0a0c10;border-radius:5px;overflow:hidden;border:1px solid var(--line);}
+.fill{height:100%;width:0;border-radius:5px;background:linear-gradient(90deg,var(--gold-deep),var(--gold-bright));transition:width 1.1s cubic-bezier(.22,1,.36,1);}
+
+/* analysis */
+.analysis p{font-size:14px;line-height:1.92;color:#d3d0c8;margin-bottom:15px;font-weight:300;}
+.analysis p:last-child{margin-bottom:0;}
+.analysis p b{color:var(--gold-bright);font-weight:500;}
+.analysis .verdict{border-left:2px solid var(--gold);padding:13px 0 13px 16px;background:linear-gradient(90deg,rgba(212,176,106,.07),transparent);border-radius:0 8px 8px 0;margin-top:4px;}
+.analysis .verdict b{color:var(--gold-bright);}
+
+/* cta block */
+.cta-block{margin:22px 18px 0;border:1px solid var(--gold-deep);border-radius:16px;padding:24px 22px;text-align:center;background:radial-gradient(100% 100% at 50% 0,rgba(212,176,106,.1),rgba(0,0,0,0));position:relative;z-index:2;}
+.cta-block .q{font-family:'Noto Serif TC',serif;font-weight:700;font-size:19px;color:#fff;margin-bottom:10px;}
+.cta-block .l{font-size:13.5px;color:var(--txt-mut);line-height:1.85;}
+.cta-block .l b{color:var(--gold-bright);font-weight:500;}
+
+/* action buttons */
+.actions{display:flex;gap:10px;margin:20px 18px 14px;position:relative;z-index:2;}
+.act{flex:1;border:1px solid var(--line2);background:var(--panel);color:var(--txt);border-radius:11px;padding:14px 6px;font-family:'Noto Sans TC';font-size:13px;font-weight:400;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;transition:.18s;}
+.act:active{background:var(--panel2);}
+.act .ic{font-size:17px;}
+.act.primary{border-color:var(--gold-deep);background:linear-gradient(180deg,rgba(212,176,106,.16),rgba(212,176,106,.05));color:var(--gold-bright);}
+.restart{display:block;width:calc(100% - 36px);margin:0 18px 8px;background:none;border:1px solid var(--line);color:var(--txt-mut);border-radius:11px;padding:13px;font-family:'Noto Sans TC';font-size:13px;cursor:pointer;}
+
+.foot{position:relative;z-index:2;text-align:center;padding:26px 24px 40px;font-size:11px;color:var(--txt-dim);line-height:1.8;}
+.foot .bd{font-family:'Noto Serif TC',serif;color:var(--gold-deep);letter-spacing:.18em;font-weight:700;font-size:13px;margin-bottom:6px;}
+
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--gold);color:#1a1305;font-weight:500;font-size:13px;padding:11px 22px;border-radius:30px;opacity:0;transition:.3s;z-index:50;box-shadow:0 8px 24px rgba(0,0,0,.4);}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+/* ---------- PRINT : clean consultant report ---------- */
+@media print{
+  @page{margin:14mm;}
+  body{background:#fff;color:#1a1a1a;}
+  .wrap{max-width:none;background:#fff;}
+  .wrap::before,header,main,.actions,.restart,.toast{display:none!important;}
+  #result{display:block!important;}
+  .rpt-flag,.dim-nm .en,.block-h .e,.gauge-lab,.stat .k,.rpt-meta{color:#8a7a4a!important;}
+  .rpt-tt,.gauge-num,.band-pill .bp,.sec-tt,.block-h .t,.cta-block .q,.dim-nm,.analysis p{color:#1a1a1a!important;}
+  .gauge-card,.stat,.block,.cta-block{background:#fff!important;border:1px solid #d8cba8!important;box-shadow:none;page-break-inside:avoid;}
+  .gauge-card::after{display:none;}
+  .analysis p{color:#2a2a2a!important;}
+  .analysis p b,.gauge-num span,.stat .v,.dim-sc{color:#9a7a30!important;}
+  .fill{background:#b89540!important;}
+  .gauge-num{color:#1a1a1a!important;}
+  .cta-block .l,.band-desc{color:#555!important;}
+  .cta-block .l b,.analysis .verdict b{color:#9a7a30!important;}
+  .foot{color:#999!important;}
+  .foot .bd{color:#9a7a30!important;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============ HEADER / FORM ============ -->
+  <header>
+    <div class="brandrow">
+      <div class="brand"><span class="dot"></span><span class="nm">科學八字</span></div>
+      <span class="ver mono">SYS V1.0</span>
+    </div>
+    <div class="eyebrow">Career Transition · Risk Protocol</div>
+    <h1>轉職<span class="g">安全度</span><br>檢測系統</h1>
+    <div class="subline mono"><span>Decision System</span><span>Risk Analysis</span></div>
+    <p class="tagline">這不是職業推薦器，也不是性向測驗。<br><b>很多人轉職失敗，不是能力不足，而是在錯的時間做了高風險決策。</b><br>本系統只回答一件事：現在轉職，你能不能<b>安全落地</b>。</p>
+  </header>
+
+  <main id="form">
+
+    <!-- 財務面 -->
+    <section class="sec">
+      <div class="sec-head"><div class="sec-idx mono">01</div><div><div class="sec-tt">財務面</div><div class="sec-en">Financial Runway</div></div></div>
+      <div class="sec-body">
+        <div class="fld"><div class="lbl">目前存款</div><div class="inputshell"><span class="cur mono">NT$</span><input type="number" id="savings" inputmode="numeric" placeholder="0"></div></div>
+        <div class="fld"><div class="lbl">每月固定支出 <span class="hint">食衣住行、生活</span></div><div class="inputshell"><span class="cur mono">NT$</span><input type="number" id="fixedExp" inputmode="numeric" placeholder="0"></div></div>
+        <div class="fld"><div class="lbl">每月貸款支出 <span class="hint">房貸、車貸、信貸</span></div><div class="inputshell"><span class="cur mono">NT$</span><input type="number" id="loanExp" inputmode="numeric" placeholder="0"></div></div>
+        <div class="fld"><div class="lbl">預計轉職後收入 <span class="hint">每月</span></div><div class="inputshell"><span class="cur mono">NT$</span><input type="number" id="newIncome" inputmode="numeric" placeholder="0"></div></div>
+        <div class="fld"><div class="lbl">預估需要多久找到新工作</div><div class="inputshell"><input type="number" id="searchMonths" class="nocur" inputmode="numeric" placeholder="3"><span class="unit">個月</span></div></div>
+        <div class="fld"><div class="lbl">是否有獨立緊急預備金</div><div class="toggle" data-toggle="emergencyFund"><button type="button" data-v="1">是</button><button type="button" data-v="0" aria-pressed="true">否</button></div></div>
+      </div>
+    </section>
+
+    <!-- 工作面 -->
+    <section class="sec">
+      <div class="sec-head"><div class="sec-idx mono">02</div><div><div class="sec-tt">工作面</div><div class="sec-en">Current Position</div></div></div>
+      <div class="sec-body">
+        <div class="fld"><div class="lbl">目前工作滿意度</div><div class="slidewrap"><input type="range" id="satisfaction" min="1" max="10" value="5"><span class="slideval mono" id="satisfactionV">5</span></div><div class="slidescale"><span>很低</span><span>很高</span></div></div>
+        <div class="fld"><div class="lbl">目前工作壓力</div><div class="slidewrap"><input type="range" id="stress" min="1" max="10" value="5"><span class="slideval mono" id="stressV">5</span></div><div class="slidescale"><span>很低</span><span>很高</span></div></div>
+        <div class="fld"><div class="lbl">主要轉職動機</div><div class="chips" data-chip="motive">
+          <button type="button" data-v="收入">收入</button><button type="button" data-v="興趣">興趣</button><button type="button" data-v="健康">健康</button><button type="button" data-v="人際">人際</button><button type="button" data-v="主管">主管</button><button type="button" data-v="職涯發展">職涯發展</button><button type="button" data-v="創業">創業</button><button type="button" data-v="其他">其他</button>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- 心理 / 準備面 -->
+    <section class="sec">
+      <div class="sec-head"><div class="sec-idx mono">03</div><div><div class="sec-tt">準備面</div><div class="sec-en">Readiness Check</div></div></div>
+      <div class="sec-body">
+        <div class="fld"><div class="lbl">是否已規劃轉職方向</div><div class="toggle" data-toggle="hasDirection"><button type="button" data-v="1">是</button><button type="button" data-v="0" aria-pressed="true">否</button></div></div>
+        <div class="fld"><div class="lbl">是否已有面試機會</div><div class="toggle" data-toggle="hasInterview"><button type="button" data-v="1">是</button><button type="button" data-v="0" aria-pressed="true">否</button></div></div>
+        <div class="fld"><div class="lbl">是否已有副業收入</div><div class="toggle" data-toggle="hasSideIncome"><button type="button" data-v="1">是</button><button type="button" data-v="0" aria-pressed="true">否</button></div></div>
+        <div class="fld"><div class="lbl">是否已準備履歷</div><div class="toggle" data-toggle="hasResume"><button type="button" data-v="1">是</button><button type="button" data-v="0" aria-pressed="true">否</button></div></div>
+        <div class="fld"><div class="lbl">是否已建立人脈</div><div class="toggle" data-toggle="hasNetwork"><button type="button" data-v="1">是</button><button type="button" data-v="0" aria-pressed="true">否</button></div></div>
+      </div>
+    </section>
+
+    <button class="cta-btn" id="analyzeBtn">啟動安全度分析<span class="sub mono">Run Risk Assessment</span></button>
+    <div class="warn" id="warn">請至少填入「目前存款」與「每月固定支出」。</div>
+  </main>
+
+  <!-- ============ RESULT ============ -->
+  <div id="result">
+    <div class="rpt-top">
+      <div class="rpt-flag mono">Confidential Assessment</div>
+      <div class="rpt-tt serif">轉職安全度決策報告</div>
+      <div class="rpt-meta mono" id="rptDate">— · 職涯 × 財務 × 風險聯合分析</div>
+    </div>
+
+    <!-- gauge -->
+    <div class="gauge-card">
+      <div class="gauge-wrap">
+        <svg width="230" height="230" viewBox="0 0 230 230">
+          <defs>
+            <lineargradient id="gg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#a8842f"></stop><stop offset="55%" stop-color="#d4b06a"></stop><stop offset="100%" stop-color="#f0d199"></stop>
+            </lineargradient>
+          </defs>
+          <circle cx="115" cy="115" r="100" fill="none" stroke="#1c1f27" stroke-width="14"></circle>
+          <circle id="gaugeArc" cx="115" cy="115" r="100" fill="none" stroke="url(#gg)" stroke-width="14" stroke-linecap="round" stroke-dasharray="628.3" stroke-dashoffset="628.3"></circle>
+        </svg>
+        <div class="gauge-center">
+          <div class="gauge-num mono"><span id="gNum">0</span><span>/100</span></div>
+          <div class="gauge-lab mono">Safety Index</div>
+        </div>
+      </div>
+      <div class="band-pill"><span class="bp" id="bandPill">—</span></div>
+      <div class="band-desc" id="bandDesc">—</div>
+    </div>
+
+    <!-- stats -->
+    <div class="stat-row">
+      <div class="stat"><div class="k mono">生存月數 · Runway</div><div class="v mono"><span id="survVal">0</span><small>個月</small></div></div>
+      <div class="stat"><div class="k mono">現金流風險 · Cashflow</div><div style="margin-top:2px"><span class="risk-tag" id="cashTag">—</span></div></div>
+    </div>
+
+    <!-- dimensions -->
+    <div class="block">
+      <div class="block-h"><span class="bar"></span><span class="t">風險構成分析</span><span class="e mono">Breakdown</span></div>
+      <div class="dim"><div class="dim-top"><span class="dim-nm">財務韌性 <span class="en">RESILIENCE</span></span><span class="dim-sc mono"><span id="dA">0</span></span></div><div class="track"><div class="fill" id="fA"></div></div></div>
+      <div class="dim"><div class="dim-top"><span class="dim-nm">準備完整度 <span class="en">READINESS</span></span><span class="dim-sc mono"><span id="dB">0</span></span></div><div class="track"><div class="fill" id="fB"></div></div></div>
+      <div class="dim"><div class="dim-top"><span class="dim-nm">收入接續力 <span class="en">CONTINUITY</span></span><span class="dim-sc mono"><span id="dD">0</span></span></div><div class="track"><div class="fill" id="fD"></div></div></div>
+      <div class="dim"><div class="dim-top"><span class="dim-nm">動機品質 <span class="en">MOTIVE</span></span><span class="dim-sc mono"><span id="dC">0</span></span></div><div class="track"><div class="fill" id="fC"></div></div></div>
+    </div>
+
+    <!-- analysis -->
+    <div class="block">
+      <div class="block-h"><span class="bar"></span><span class="t">決策分析</span><span class="e mono">Advisory</span></div>
+      <div class="analysis" id="analysis"></div>
+    </div>
+
+    <!-- cta -->
+    <div class="cta-block">
+      <div class="q serif">想轉職？先不要急著離職。</div>
+      <div class="l">離職不是勇氣問題，是<b>生存問題</b>。<br>先看清楚自己的安全距離，再決定要不要起跳。</div>
+    </div>
+
+    <div class="actions">
+      <button class="act" id="copyBtn"><span class="ic">⧉</span>複製報告</button>
+      <button class="act primary" id="pdfBtn"><span class="ic">⤓</span>匯出 PDF</button>
+    </div>
+    <button class="restart" id="restartBtn">↻ 重新評估</button>
+
+    <div class="foot">
+      <div class="bd serif">科學八字</div>
+      不是命運，是你的決策結構。<br>
+      本報告為決策輔助分析，最終決定權在你手上。
+    </div>
+  </div>
+
+  <div class="toast" id="toast">已複製到剪貼簿</div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var state={emergencyFund:0,hasDirection:0,hasInterview:0,hasSideIncome:0,hasResume:0,hasNetwork:0,motive:null};
+
+  // toggles
+  document.querySelectorAll('[data-toggle]').forEach(function(g){
+    var key=g.getAttribute('data-toggle');
+    g.querySelectorAll('button').forEach(function(b){
+      b.addEventListener('click',function(){
+        g.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false');});
+        b.setAttribute('aria-pressed','true');
+        state[key]=parseInt(b.getAttribute('data-v'),10);
+      });
+    });
+  });
+  // chips (single select)
+  document.querySelectorAll('[data-chip]').forEach(function(g){
+    var key=g.getAttribute('data-chip');
+    g.querySelectorAll('button').forEach(function(b){
+      b.addEventListener('click',function(){
+        var on=b.getAttribute('aria-pressed')==='true';
+        g.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false');});
+        if(!on){b.setAttribute('aria-pressed','true');state[key]=b.getAttribute('data-v');}else{state[key]=null;}
+      });
+    });
+  });
+  // sliders
+  ['satisfaction','stress'].forEach(function(id){
+    var s=document.getElementById(id),v=document.getElementById(id+'V');
+    s.addEventListener('input',function(){v.textContent=s.value;});
+  });
+
+  function num(id){var x=parseFloat(document.getElementById(id).value);return isNaN(x)?0:Math.max(0,x);}
+  function fmt(n){return 'NT$ '+Math.round(n).toLocaleString('en-US');}
+  function clamp(x,a,b){return Math.max(a,Math.min(b,x));}
+
+  function compute(){
+    var d={
+      savings:num('savings'), fixedExp:num('fixedExp'), loanExp:num('loanExp'),
+      newIncome:num('newIncome'), searchMonths:num('searchMonths')||3,
+      emergencyFund:state.emergencyFund, satisfaction:+document.getElementById('satisfaction').value,
+      stress:+document.getElementById('stress').value, motive:state.motive||'其他',
+      hasDirection:state.hasDirection,hasInterview:state.hasInterview,hasSideIncome:state.hasSideIncome,
+      hasResume:state.hasResume,hasNetwork:state.hasNetwork
+    };
+    var burn=d.fixedExp+d.loanExp;
+    var survival = burn>0 ? d.savings/burn : (d.savings>0?999:0);
+
+    // A 財務韌性
+    var required=d.searchMonths+3;
+    var runwayRatio = burn>0 ? survival/required : 3;
+    var runwayScore=clamp((runwayRatio-0.2)/(1.5-0.2)*100,0,100);
+    var emergencyScore=d.emergencyFund?100:0;
+    var loanRatio=burn>0?d.loanExp/burn:0;
+    var loanScore=clamp((1-loanRatio)*100,0,100);
+    var A=clamp(0.65*runwayScore+0.20*emergencyScore+0.15*loanScore,0,100);
+
+    // B 準備完整度
+    var B=(d.hasDirection?20:0)+(d.hasInterview?30:0)+(d.hasSideIncome?25:0)+(d.hasResume?12:0)+(d.hasNetwork?13:0);
+
+    // D 收入接續力
+    var incRatio = burn>0 ? d.newIncome/burn : (d.newIncome>0?1.5:0);
+    var D=clamp(incRatio/1.5*100,0,100);
+    if(d.hasSideIncome) D=Math.max(D,40);
+
+    // C 動機品質
+    var base={'職涯發展':90,'興趣':80,'創業':70,'收入':65,'健康':60,'其他':55,'人際':45,'主管':40}[d.motive];
+    var pressure=((10-d.satisfaction)+d.stress)/2;
+    var C=base;
+    if(pressure>=8) C-=6;      // 高壓下倉促決策風險
+    if(pressure<=3) C-=4;      // 現況其實還好，動機不夠強
+    C=clamp(C,0,100);
+
+    var total=Math.round(clamp(0.42*A+0.28*B+0.18*D+0.12*C,0,100));
+
+    // band
+    var band;
+    if(total<40) band={t:'高風險',d:'不建議立即轉職',c:'var(--red)'};
+    else if(total<60) band={t:'謹慎評估',d:'需增加準備',c:'var(--orange)'};
+    else if(total<80) band={t:'可規劃轉職',d:'風險可控',c:'var(--amber)'};
+    else band={t:'相對安全',d:'具備轉職條件',c:'var(--green)'};
+
+    // cashflow risk
+    var cash;
+    if(burn<=0) cash={t:'低',c:'var(--green)'};
+    else{
+      var r=survival/(d.searchMonths+1);
+      if(r>=3) cash={t:'低',c:'var(--green)'};
+      else if(r>=1.8) cash={t:'中',c:'var(--amber)'};
+      else if(r>=1.0) cash={t:'高',c:'var(--orange)'};
+      else cash={t:'極高',c:'var(--red)'};
+    }
+    if(!d.emergencyFund && cash.t==='中') cash={t:'高',c:'var(--orange)'};
+
+    return {d:d,burn:burn,survival:survival,A:Math.round(A),B:Math.round(B),C:Math.round(C),D:Math.round(D),
+            total:total,band:band,cash:cash,loanRatio:loanRatio};
+  }
+
+  function buildAnalysis(r){
+    var d=r.d,L=[];
+    var lowSat=d.satisfaction<=4, highStress=d.stress>=7;
+
+    // 1. 核心診斷
+    if(highStress&&lowSat) L.push("你目前同時出現<b>低滿意度</b>與<b>高壓力</b>，這通常代表你想離開的動力來自「推力」而非「拉力」——是逃離現況，而不是奔向某個明確目標。逃離型決策最大的風險，是在準備還沒到位時就提前起跳。");
+    else if(lowSat&&!highStress) L.push("你的滿意度偏低、但壓力仍在可承受範圍內。這比較像是<b>職涯停滯</b>，而不是立即危機——代表你還有時間用更低風險的方式規劃，不需要在倉促中決定。");
+    else if(!lowSat&&highStress) L.push("你對工作本身的滿意度其實不低，主要問題來自<b>壓力</b>。轉換跑道前值得先釐清：壓力來自「職務本身」還是「特定環境」——後者有時換組、換主管就能解決，不一定需要整段轉職。");
+    else L.push("你目前的滿意度與壓力都相對平衡。在沒有急迫推力的情況下轉職，更需要一個明確的「拉力」目標來支撐——否則容易在過程中動搖。");
+
+    // 2. 動機
+    var mv={
+      '收入':"你的核心動機是<b>收入</b>。這是少數可以被量化驗證的動機——關鍵只在一件事：轉職後的收入是否真的高於現在，並足以覆蓋固定支出。",
+      '興趣':"你的核心動機是<b>興趣</b>。興趣是好的長期燃料，但它不會直接支付帳單。建議用「副業先行」的方式驗證興趣能否轉成收入，再決定是否全職投入。",
+      '健康':"你的核心動機是<b>健康</b>。這是所有動機中最不該被犧牲的一種——如果現況正在損害身體，財務安全度的標準可以適度放寬，但仍需要一個基本的生存緩衝來保護你。",
+      '人際':"你的核心動機是<b>人際關係</b>。人際問題往往是「環境特定」的，換部門或換團隊可能就能解決，未必需要承擔整段轉職的風險。",
+      '主管':"你的核心動機是與<b>主管</b>的關係。這類動機要特別小心：對特定一個人的不滿，很容易被誤判成「整份工作都不適合」。離開前先確認，你要解決的是這個人，還是這份職業。",
+      '職涯發展':"你的核心動機是<b>職涯發展</b>。這是「拉力型」動機——你為了奔向更好的位置而移動，而非逃離。這類決策的成功率通常較高，重點在於確保新方向的成長性是真實、而非想像的。",
+      '創業':"你的核心動機是<b>創業</b>。創業的風險結構與一般轉職完全不同——你需要的不是「找到新工作的時間」，而是「撐到現金流轉正的時間」，這段緩衝通常要抓得更長。",
+      '其他':"關於你的轉職動機，建議先用一句話把它寫清楚——一個說不清楚的動機，往往代表這個決策本身還沒成熟。"
+    };
+    L.push(mv[d.motive]);
+
+    // 3. 財務判定
+    var sm=r.survival;
+    if(r.burn<=0){
+      L.push("你目前幾乎沒有固定支出壓力，這是極大的優勢——在沒有現金流出的情況下，轉職的生存風險被大幅降低。");
+    }else if(sm<d.searchMonths){
+      L.push("以目前存款與每月 <b>"+fmt(r.burn)+"</b> 的固定支出計算，你的資金大約只能撐 <b>"+sm.toFixed(1)+" 個月</b>，但你預估要花 "+d.searchMonths+" 個月才能找到新工作——這代表在你找到工作之前，資金就會先見底。<b>這是目前最該優先處理的風險。</b>");
+    }else if(sm<d.searchMonths+3){
+      L.push("你的資金大約能撐 <b>"+sm.toFixed(1)+" 個月</b>，剛好略高於你預估的 "+d.searchMonths+" 個月求職期，但緩衝非常薄。一旦求職時間拉長、或新工作首份薪水延後入帳，你會立刻掉進危險區。建議至少再多備 3 個月的安全水位。");
+    }else{
+      L.push("你的資金大約能支撐 <b>"+sm.toFixed(1)+" 個月</b>，明顯高於你預估的 "+d.searchMonths+" 個月求職期，財務緩衝充足。即使求職過程不如預期，你也有調整的餘地。");
+    }
+    if(!d.emergencyFund) L.push("你目前沒有獨立的緊急預備金。轉職期間最怕的不是「沒收入」，而是「沒收入的同時又遇到意外支出」。建議在行動前先備妥一筆與生活費分開的緊急金。");
+    else if(r.loanRatio>=0.4) L.push("你的支出中有相當比例是貸款——這類支出不會隨節約而下降，是壓在身上的硬成本，會讓你的實際生存月數比想像中更短。");
+
+    // 4. 準備度
+    if(d.hasInterview) L.push("你已經有<b>面試機會</b>——這是準備度裡最有價值的訊號，代表你不是在「想像中轉職」，而是已經有實際落點。");
+    var miss=[];
+    if(!d.hasInterview)miss.push('面試機會');
+    if(!d.hasSideIncome)miss.push('副業收入');
+    if(!d.hasDirection)miss.push('明確方向');
+    if(!d.hasResume)miss.push('履歷');
+    if(!d.hasNetwork)miss.push('人脈');
+    if(miss.length===0) L.push("你的轉職準備相當完整，方向、履歷、人脈、面試與副業收入都已就位——這在實務上是少數能讓人「安全落地」的狀態。");
+    else L.push("在準備項目上，你還缺少：<b>"+miss.join('、')+"</b>。其中「面試機會」與「副業收入」是降低轉職風險最關鍵的兩項，建議優先補上。");
+
+    // 5. 收入接續
+    if(d.newIncome<=0) L.push("你尚未填入明確的轉職後收入，代表收入端目前是空白的。在確定的收入來源出現之前，每一個月都是純消耗。");
+    else if(r.burn>0 && d.newIncome>=r.burn*1.3) L.push("你預估的轉職後收入（"+fmt(d.newIncome)+"）明顯高於固定支出，收入接續力良好——只要能順利落地，財務狀況會比現在更穩。");
+    else if(r.burn>0 && d.newIncome>=r.burn) L.push("你預估的轉職後收入大致能覆蓋固定支出，但結餘不多。轉職初期通常還有適應期與隱性成本，建議把這份收入預估再保守一點看待。");
+    else if(r.burn>0) L.push("你預估的轉職後收入<b>低於目前的固定支出</b>——這意味著即使順利轉職，你仍會處在「每月入不敷出」的狀態。除非這是為了長期成長刻意接受的短空，否則需要重新檢視。");
+
+    // 6. 綜合判斷
+    var verdict={
+      '高風險':"<b>綜合判斷：</b>現在不是立即轉職的好時機。這不代表你不能轉，而是「直接離職」的風險過高。建議採取<b>騎驢找馬</b>策略——在保有現職收入的前提下，同步補強財務緩衝、累積面試機會與副業收入，把安全度拉到 60 以上再行動。",
+      '謹慎評估':"<b>綜合判斷：</b>你已具備部分條件，但還不到能安心行動的程度。現在的關鍵是<b>補洞</b>——針對上面點出的最大缺口（通常是財務緩衝或落點）做補強，而不是憑衝動離開。",
+      '可規劃轉職':"<b>綜合判斷：</b>你的轉職風險已在可控範圍內，可以開始實際規劃。建議仍以<b>「先有落點再離職」</b>為原則，讓最後一塊拼圖（如確定的 offer）到位後，再正式遞出辭呈。",
+      '相對安全':"<b>綜合判斷：</b>你已具備安全轉職的條件——財務、準備與收入接續都站得住腳。剩下的不再是「能不能」的問題，而是「時機與選擇」的問題。<b>可以開始進行求職行動。</b>"
+    };
+    return {paras:L,verdict:verdict[r.band.t]};
+  }
+
+  function render(r){
+    document.getElementById('form').style.display='none';
+    document.querySelector('header').style.display='none';
+    document.getElementById('result').style.display='block';
+
+    // date
+    var dt=new Date();
+    document.getElementById('rptDate').textContent=dt.getFullYear()+'.'+('0'+(dt.getMonth()+1)).slice(-2)+'.'+('0'+dt.getDate()).slice(-2)+' · 職涯 × 財務 × 風險聯合分析';
+
+    // gauge
+    var arc=document.getElementById('gaugeArc'), C=628.3;
+    var bandColor=getComputedStyle(document.documentElement).getPropertyValue(r.band.c.replace('var(','').replace(')','').trim())||'#d4b06a';
+    setTimeout(function(){arc.style.transition='stroke-dashoffset 1.5s cubic-bezier(.22,1,.36,1)';arc.style.strokeDashoffset=C*(1-r.total/100);},150);
+    // count up
+    var gn=document.getElementById('gNum'),cur=0,step=Math.max(1,Math.round(r.total/40));
+    var iv=setInterval(function(){cur+=step;if(cur>=r.total){cur=r.total;clearInterval(iv);}gn.textContent=cur;},28);
+
+    // band
+    var pill=document.getElementById('bandPill');
+    pill.textContent=r.band.t;pill.style.color=r.band.c;pill.style.borderColor=r.band.c;
+    document.getElementById('bandDesc').textContent=r.band.d;
+
+    // stats
+    document.getElementById('survVal').textContent=r.burn<=0?'∞':(r.survival>=99?'99+':r.survival.toFixed(1));
+    var ct=document.getElementById('cashTag');ct.textContent=r.cash.t;ct.style.color=r.cash.c;ct.style.borderColor=r.cash.c;
+
+    // dimensions
+    [['A',r.A],['B',r.B],['C',r.C],['D',r.D]].forEach(function(p){
+      document.getElementById('d'+p[0]).textContent=p[1];
+      setTimeout(function(){document.getElementById('f'+p[0]).style.width=p[1]+'%';},300);
+    });
+
+    // analysis
+    var an=buildAnalysis(r),html='';
+    an.paras.forEach(function(p){html+='<p>'+p+'</p>';});
+    html+='<p class="verdict">'+an.verdict+'</p>';
+    document.getElementById('analysis').innerHTML=html;
+
+    window.scrollTo({top:0,behavior:'smooth'});
+    window._report=r;window._analysis=an;
+  }
+
+  document.getElementById('analyzeBtn').addEventListener('click',function(){
+    if(num('savings')<=0 && num('fixedExp')<=0){document.getElementById('warn').style.display='block';return;}
+    document.getElementById('warn').style.display='none';
+    render(compute());
+  });
+
+  document.getElementById('restartBtn').addEventListener('click',function(){
+    document.getElementById('result').style.display='none';
+    document.getElementById('form').style.display='block';
+    document.querySelector('header').style.display='block';
+    document.getElementById('gaugeArc').style.strokeDashoffset='628.3';
+    window.scrollTo({top:0});
+  });
+
+  document.getElementById('pdfBtn').addEventListener('click',function(){window.print();});
+
+  document.getElementById('copyBtn').addEventListener('click',function(){
+    var r=window._report,an=window._analysis;if(!r)return;
+    function strip(s){return s.replace(/<[^>]+>/g,'');}
+    var t='【科學八字 · 轉職安全度決策報告】\n職涯 × 財務 × 風險 聯合分析\n\n';
+    t+='■ 轉職安全度：'+r.total+'/100　'+r.band.t+'（'+r.band.d+'）\n';
+    t+='■ 生存月數：'+(r.burn<=0?'無固定支出壓力':(r.survival>=99?'99+':r.survival.toFixed(1))+' 個月')+'\n';
+    t+='■ 現金流風險：'+r.cash.t+'\n\n';
+    t+='── 風險構成 ──\n財務韌性 '+r.A+'　準備完整度 '+r.B+'　收入接續力 '+r.D+'　動機品質 '+r.C+'\n\n';
+    t+='── 決策分析 ──\n';
+    an.paras.forEach(function(p){t+='· '+strip(p)+'\n\n';});
+    t+=strip(an.verdict)+'\n\n';
+    t+='———\n科學八字｜不是命運，是你的決策結構。\n想轉職？先不要急著離職。先看清楚自己的安全距離。';
+    var done=function(){var to=document.getElementById('toast');to.classList.add('show');setTimeout(function(){to.classList.remove('show');},1800);};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){fallback(t);done();});}
+    else{fallback(t);done();}
+    function fallback(txt){var ta=document.createElement('textarea');ta.value=txt;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);}
+  });
+})();
+</script>
+
+
+</body></html>
